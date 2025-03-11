@@ -2,7 +2,6 @@ import tkinter as tk
 from tkinter import messagebox, PhotoImage
 import time
 
-# Global variable to track active timer
 timer_running = False
 
 def start_timer():
@@ -10,7 +9,7 @@ def start_timer():
     timer_running = True
     start_button.config(text="Reset Timer", command=reset_timer)
     label.config(text="Timer: 3:00")
-    countdown(180)  # 3 minutes
+    countdown(180)  # 3 mins
 
 def reset_timer():
     global timer_running
@@ -39,7 +38,7 @@ def cycle_images():
     global current_image
     current_image = egg_image2 if current_image == egg_image3 else egg_image3
     image_label.config(image=current_image)
-    root.after(1000, cycle_images)
+    root.after(500, cycle_images) # Create a "gif"
 
 # Create main window
 root = tk.Tk()
@@ -49,7 +48,7 @@ root.configure(bg="lightyellow")
 
 # Load and resize images
 try:
-    egg_image = PhotoImage(file="egg.png").zoom(5, 5)  # Image size
+    egg_image = PhotoImage(file="egg.png").zoom(5, 5)  # .zoom to increase image size
     egg_image2 = PhotoImage(file="egg2.png").zoom(5, 5)
     egg_image3 = PhotoImage(file="egg3.png").zoom(5, 5)
     current_image = egg_image
@@ -64,10 +63,10 @@ except Exception as e:
     image_label = tk.Label(root, bg="lightyellow")
     image_label.pack(pady=10)
 
-# Load pixel font
+# Load custom font
 pixel_font = ("Arial Rounded MT Bold", 14)
 
-# Label to display time
+# Display time
 label = tk.Label(root, text="Press Start to begin", font=pixel_font, bg="lightyellow", fg="black")
 label.pack(pady=20)
 
@@ -75,5 +74,5 @@ label.pack(pady=20)
 start_button = tk.Button(root, text="Start Timer", font=("Arial Rounded MT Bold", 12), command=start_timer, bg="orange", fg="white")
 start_button.pack()
 
-# Run the application
+# Run main
 root.mainloop()
