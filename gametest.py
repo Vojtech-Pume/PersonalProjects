@@ -1,9 +1,7 @@
 import pygame
 
-# Initialize game
 pygame.init()
 
-# Game settings
 WIDTH, HEIGHT = 500, 500 # Window size
 WHITE = (255, 255, 255) # Background color
 RED = (255, 0, 0) # Player color
@@ -13,17 +11,17 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("RPG Game")
 
 # Player settings
-player_size = 50  # Player size
+player_size = 50
 player_x = WIDTH // 2 - player_size // 2
-player_y = HEIGHT // 2 - player_size // 2
-speed = 5  # Movement speed
+player_y = HEIGHT // 2 - player_size // 2 # see saved link for explanation
+speed = 5
 
 # Game loop
 running = True
 while running:
     pygame.time.delay(30)
 
-    # Check for events (key presses, window close)
+    # Check for events
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
