@@ -1,0 +1,107 @@
+/* Structure */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Text */
+h1 {
+    font-size: 2em;
+    text-align: center;
+    color: #222;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+a:hover {
+    color: red;
+}
+
+/* Box */
+.box {
+    width: 300px;
+    height: 200px;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 10px;
+    background-color: lightgray;
+}
+
+/* Display and positioning */
+.block {
+    display: block;
+}
+
+.inline {
+    display: inline;
+}
+
+.relative {
+    position: relative;
+    top: 20px;
+    left: 10px;
+}
+
+.absolute {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+.fixed {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+/* Flexbox */
+.flex-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh;
+}
+
+/* Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+/* Background */
+.bg-image {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-color {
+    background-color: lightblue;
+}
+
+/* Border */
+.border-box {
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive (include this lol) */
+@media (max-width: 600px) {
+    body {
+        background-color: lightcoral;
+    }
+}
